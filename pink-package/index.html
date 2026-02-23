@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en-GB" prefix="og: https://ogp.me/ns#">
-<!-- Mirrored from hexivox.com/pink-package/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Feb 2026 22:26:11 GMT -->
+<!-- Mirrored from hexivox.com/pink-package/ by HTTrack Website Copier/3. 
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><title>AI Robot Support Website Package Feature-Rich for Growing Businesses</title><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin/><link rel="preconnect" href="https://fonts.googleapis.com/"/><style type="text/css">@font-face {
  font-family: 'Noto Sans';
@@ -320,31 +320,146 @@ Quick deployment so your AI support system can start helping customers immediate
 </button>
 
 <!-- Invoice request modal -->
-<div id="invoice-modal" aria-hidden="true" style="display:none; position:fixed; inset:0; z-index:9999;"> 
-    <div id="invoice-modal-overlay" style="position:fixed; inset:0; background:rgba(0,0,0,0.5);"></div>
-    <div role="dialog" aria-modal="true" aria-labelledby="invoice-modal-title" style="position:relative; max-width:520px; margin:6vh auto; background:#fff;  color: black !important; border-radius:8px; padding:20px; z-index:10000; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
-        <button id="invoice-modal-close" aria-label="Close" style="position:absolute; right:12px; top:12px; background:transparent; border:0; font-size:18px;">✕</button>
-        <h3 id="invoice-modal-title" style="margin-top:0;">Request Invoice</h3>
+<!-- Professional Invoice Request Modal - Pink Package -->
+<div id="invoice-modal" aria-hidden="true" style="display:none; position:fixed; inset:0; z-index:9999; font-family: 'Noto Sans', 'Roboto', sans-serif;"> 
+    <div id="invoice-modal-overlay" style="position:fixed; inset:0; background:rgba(15, 16, 42, 0.85); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);"></div>
+    
+    <div role="dialog" aria-modal="true" aria-labelledby="invoice-modal-title" style="position:relative; max-width:580px; margin:8vh auto; background:#ffffff; color:#1B203A !important; border-radius:20px; padding:32px; z-index:10000; box-shadow:0 25px 50px -12px rgba(0, 0, 0, 0.25); border:1px solid rgba(255, 105, 180, 0.15);">
+        
+        <!-- Subtle gradient accent line - Pink for this package -->
+        <div style="position:absolute; top:0; left:24px; right:24px; height:4px; background:linear-gradient(90deg, #FF69B4, #8B5DFF, #FF69B4); border-radius:4px 4px 0 0;"></div>
+        
+        <!-- Close button - refined -->
+        <button id="invoice-modal-close" aria-label="Close" style="position:absolute; right:20px; top:20px; background:transparent; border:0; font-size:20px; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#FF69B4; cursor:pointer; transition:all 0.2s ease; z-index:10;" 
+        onmouseover="this.style.background='rgba(255, 105, 180, 0.08)';" 
+        onmouseout="this.style.background='transparent';">✕</button>
+        
+        <!-- Header - clean and professional -->
+        <div style="margin-bottom:28px;">
+            <span style="display:inline-block; color:#FF69B4; font-size:13px; font-weight:600; letter-spacing:0.5px; text-transform:uppercase; margin-bottom:8px;">Invoice Request</span>
+            <h3 id="invoice-modal-title" style="margin:0; font-size:24px; font-weight:600; color:#1B203A; letter-spacing:-0.3px;">AI Robot Support Package</h3>
+            <p style="color:#4B4D56; font-size:15px; margin:8px 0 0 0; line-height:1.5;">Complete the form below and our team will prepare your invoice within 24 hours.</p>
+        </div>
+        
         <form id="invoice-form">
-            <label style="display:block; margin-bottom:8px;">Company name<br>
-                <input name="company" id="invoice-company" type="text" required style="width:100%; padding:8px; margin-top:6px;" />
-            </label>
-            <label style="display:block; margin-bottom:8px;">Email<br>
-                <input name="email" id="invoice-email" type="email" required style="width:100%; padding:8px; margin-top:6px;" />
-            </label>
-            <label style="display:block; margin-bottom:8px;">Plesk Database route<br>
-                <input name="plesk" id="invoice-plesk" type="text" placeholder="e.g. /var/lib/mysql/mydb" style="width:100%; padding:8px; margin-top:6px;" />
-            </label>
-            <label style="display:block; margin-bottom:12px;">Domain<br>
-                <input name="domain" id="invoice-domain" type="text" placeholder="example.com" style="width:100%; padding:8px; margin-top:6px;" />
-            </label>
-            <div style="display:flex; gap:10px; justify-content:flex-end;">
-                <button type="button" id="invoice-cancel" style="padding:8px 12px; background:#eee; border:1px solid #ccc; border-radius:4px;  color: black !important;">Cancel</button>
-                <button type="submit" id="invoice-submit" style="padding:8px 12px; background:#7c27dd; color:#fff; border:none; border-radius:4px;">Send Request</button>
+            <!-- Two-column grid container -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+                
+                <!-- Company name field - Professional pink accent -->
+                <div>
+                    <label style="display:block; margin-bottom:6px; font-weight:500; color:#1B203A; font-size:13px; letter-spacing:0.2px;">Company name</label>
+                    <input name="company" id="invoice-company" type="text" required placeholder="e.g. Acme Ltd" style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; transition:all 0.2s; background:#ffffff; font-family:inherit; color:#1B203A;" 
+                    onfocus="this.style.borderColor='#FF69B4'; this.style.boxShadow='0 0 0 3px rgba(255, 105, 180, 0.1)'; this.style.outline='none';" 
+                    onblur="this.style.borderColor='#e0e0e7'; this.style.boxShadow='none';" />
+                </div>
+                
+                <!-- Email field - Professional blue accent -->
+                <div>
+                    <label style="display:block; margin-bottom:6px; font-weight:500; color:#1B203A; font-size:13px; letter-spacing:0.2px;">Email address</label>
+                    <input name="email" id="invoice-email" type="email" required placeholder="e.g. hello@acme.com" style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; transition:all 0.2s; background:#ffffff; font-family:inherit; color:#1B203A;" 
+                    onfocus="this.style.borderColor='#8B5DFF'; this.style.boxShadow='0 0 0 3px rgba(139, 93, 255, 0.1)'; this.style.outline='none';" 
+                    onblur="this.style.borderColor='#e0e0e7'; this.style.boxShadow='none';" />
+                </div>
+                
+                <!-- Plesk field - Professional pink accent -->
+                <div>
+                    <label style="display:block; margin-bottom:6px; font-weight:500; color:#1B203A; font-size:13px; letter-spacing:0.2px;">Plesk database path</label>
+                    <input name="plesk" id="invoice-plesk" type="text" placeholder="/var/lib/mysql/mydb" style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; transition:all 0.2s; background:#ffffff; font-family:inherit; color:#1B203A;" 
+                    onfocus="this.style.borderColor='#FF69B4'; this.style.boxShadow='0 0 0 3px rgba(255, 105, 180, 0.1)'; this.style.outline='none';" 
+                    onblur="this.style.borderColor='#e0e0e7'; this.style.boxShadow='none';" />
+                </div>
+                
+                <!-- Domain field - Professional blue accent -->
+                <div>
+                    <label style="display:block; margin-bottom:6px; font-weight:500; color:#1B203A; font-size:13px; letter-spacing:0.2px;">Domain</label>
+                    <input name="domain" id="invoice-domain" type="text" placeholder="example.com" style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; transition:all 0.2s; background:#ffffff; font-family:inherit; color:#1B203A;" 
+                    onfocus="this.style.borderColor='#8B5DFF'; this.style.boxShadow='0 0 0 3px rgba(139, 93, 255, 0.1)'; this.style.outline='none';" 
+                    onblur="this.style.borderColor='#e0e0e7'; this.style.boxShadow='none';" />
+                </div>
+            </div>
+            
+            <!-- Additional notes field (optional) -->
+            <div style="margin-bottom:24px;">
+                <label style="display:block; margin-bottom:6px; font-weight:500; color:#1B203A; font-size:13px; letter-spacing:0.2px;">Additional notes (optional)</label>
+                <textarea rows="2" placeholder="Any specific requirements or questions about AI Robot Support..." style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; font-family:inherit; resize:none; background:#ffffff; color:#1B203A;" 
+                onfocus="this.style.borderColor='#FF69B4'; this.style.boxShadow='0 0 0 3px rgba(255, 105, 180, 0.1)'; this.style.outline='none';" 
+                onblur="this.style.borderColor='#e0e0e7'; this.style.boxShadow='none';"></textarea>
+            </div>
+            
+            <!-- Buttons container - professional alignment -->
+            <div style="display:flex; gap:12px; justify-content:flex-end; align-items:center; border-top:1px solid #eaeef5; padding-top:24px;">
+                <button type="button" id="invoice-cancel" style="padding:12px 20px; background:transparent; border:1px solid #d0d5e0; border-radius:10px; color:#4B4D56; font-weight:500; font-size:14px; cursor:pointer; transition:all 0.2s ease; font-family:inherit;" 
+                onmouseover="this.style.background='#f5f7fa'; this.style.borderColor='#b0b8c5';" 
+                onmouseout="this.style.background='transparent'; this.style.borderColor='#d0d5e0';">Cancel</button>
+                
+                <button type="submit" id="invoice-submit" style="padding:12px 28px; background:#FF69B4; color:white; border:none; border-radius:10px; font-weight:500; font-size:14px; cursor:pointer; transition:all 0.2s ease; box-shadow:0 4px 10px rgba(255, 105, 180, 0.2); font-family:inherit;" 
+                onmouseover="this.style.background='#ff4da6'; this.style.boxShadow='0 6px 14px rgba(255, 105, 180, 0.3)';" 
+                onmouseout="this.style.background='#FF69B4'; this.style.boxShadow='0 4px 10px rgba(255, 105, 180, 0.2)';">
+                    <span style="display:flex; align-items:center; gap:6px; justify-content:center;">
+                        Request Invoice
+                    </span>
+                </button>
+            </div>
+            
+            <!-- Trust indicator - subtle -->
+            <div style="margin-top:16px; text-align:center;">
+                <p style="color:#8f94b0; font-size:12px; margin:0; display:flex; align-items:center; justify-content:center; gap:6px;">
+                    <span style="color:#FF69B4;">✓</span>
+                    Secure encrypted form
+                </p>
             </div>
         </form>
     </div>
 </div>
+
+<style>
+/* Smooth entrance animation */
+#invoice-modal[style*="display: block"] > div[role="dialog"] {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input placeholder styling */
+#invoice-modal input::placeholder,
+#invoice-modal textarea::placeholder {
+    color: #9aa1b5;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+/* Button press effect */
+#invoice-submit:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(255, 105, 180, 0.2) !important;
+}
+
+#invoice-cancel:active {
+    transform: translateY(1px);
+}
+
+/* Responsive for mobile */
+@media (max-width: 640px) {
+    #invoice-modal > div[role="dialog"] {
+        margin: 4vh 16px;
+        padding: 28px 20px;
+    }
+    
+    #invoice-modal form > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+}
+</style>
 
 <script>
     (function(){
@@ -877,5 +992,5 @@ gtag('config', '', {
  }
  ]
 }</script> <script defer src="../wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-js-15477e7cd3a43e7157f2d4424433c237.js"></script></body>
-<!-- Mirrored from hexivox.com/pink-package/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Feb 2026 22:26:16 GMT -->
+
 </html>
