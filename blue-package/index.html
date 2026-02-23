@@ -379,7 +379,7 @@ Fast setup so your AI chat assistant can start working for you quickly.</p>
             <!-- Additional notes field (optional) -->
             <div style="margin-bottom:24px;">
                 <label style="display:block; margin-bottom:6px; font-weight:500; color:#1B203A; font-size:13px; letter-spacing:0.2px;">Additional notes (optional)</label>
-                <textarea rows="2" placeholder="Any specific requirements or questions about the Chat Plugin..." style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; font-family:inherit; resize:none; background:#ffffff; color:#1B203A;" 
+                <textarea name="additional" id="invoice-additional" rows="2" placeholder="Any specific requirements or questions about the Chat Plugin..." style="width:100%; padding:12px 14px; border:1px solid #e0e0e7; border-radius:10px; font-size:14px; font-family:inherit; resize:none; background:#ffffff; color:#1B203A;" 
                 onfocus="this.style.borderColor='#8B5DFF'; this.style.boxShadow='0 0 0 3px rgba(139, 93, 255, 0.1)'; this.style.outline='none';" 
                 onblur="this.style.borderColor='#e0e0e7'; this.style.boxShadow='none';"></textarea>
             </div>
@@ -466,6 +466,7 @@ Fast setup so your AI chat assistant can start working for you quickly.</p>
         var closeBtn = document.getElementById('invoice-modal-close');
         var cancelBtn = document.getElementById('invoice-cancel');
         var form = document.getElementById('invoice-form');
+        var additional = document.getElementById("invoice-additional")
 
         window.openInvoiceModal = function(){
             if(!modal) return;
@@ -494,11 +495,12 @@ Fast setup so your AI chat assistant can start working for you quickly.</p>
                 var email = document.getElementById('invoice-email').value.trim();
                 var plesk = document.getElementById('invoice-plesk').value.trim();
                 var domain = document.getElementById('invoice-domain').value.trim();
+                var additional = document.getElementById('invoice-additional').value.trim();
                 if(!company || !email){
                     alert('Please provide company name and a valid email.');
                     return;
                 }
-                var body = 'Company: '+company+'%0D%0AEmail: '+email+'%0D%0APlesk Database route: '+plesk+'%0D%0ADomain: '+domain;
+                var body = 'Company: '+company+'%0D%0AEmail: '+email+'%0D%0APlesk Database route: '+plesk+'%0D%0ADomain: '+domain+'%0D%0AAdditional:'+additional;
                 var subject = 'Invoice request from '+company;
                 var to = 'sales@botsphere.com';
                 var mailto = 'mailto:'+encodeURIComponent(to)+'?subject='+encodeURIComponent(subject)+'&body='+body;
